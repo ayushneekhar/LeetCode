@@ -12,6 +12,27 @@ public:
         sort(nums.begin(), nums.end());
         return nums;
     }
+
+    vector<int> usingTwoPointer(vector<int> &nums)
+    {
+        int n = nums.size() - 1;
+        vector<int> result(n + 1);
+        int right = n;
+        int left = 0;
+
+        while (right >= left)
+        {
+            if (abs(nums[right]) >= abs(nums[left]))
+            {
+                result[n--] = pow(nums[right--], 2);
+            }
+            else if (abs(nums[right]) <= abs(nums[left]))
+            {
+                result[n--] = pow(nums[left++], 2);
+            }
+        }
+        return result;
+    }
 };
 
 int main()
