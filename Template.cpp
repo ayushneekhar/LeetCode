@@ -4,13 +4,11 @@ using namespace std;
 class Solutions
 {
 public:
-    int func()
-    {
-    }
 };
 
 int main()
 {
+    vector<int> burh = {};
     Solutions s;
-    s.func();
+    s.;
 }
