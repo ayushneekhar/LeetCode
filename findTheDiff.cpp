@@ -20,4 +20,34 @@ public:
         }
         return t[0];
     }
+
+    char usingXOR(string s, string t)
+    {
+        char r = 0;
+        for (char c : s)
+        {
+            cout << "t: " << r << "^" << c << " > " << (char)(r ^ c) << endl;
+            r ^= c;
+        }
+        cout << "r = " << (char)r << endl;
+        for (char c : t)
+        {
+            cout << "t: " << r << "^" << c << " > " << (char)(r ^ c) << endl;
+            r ^= c;
+        }
+        cout << "r = " << (char)r << endl;
+        return r;
+    }
+
+    char findTheDifference(string s, string t)
+    {
+        int ascii = 0;
+
+        for (char it : t)
+            ascii += (int)it;
+        for (char it : s)
+            ascii -= (int)it;
+
+        return (char)ascii;
+    }
 };
