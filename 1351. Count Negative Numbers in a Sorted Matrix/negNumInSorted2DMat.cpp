@@ -13,7 +13,7 @@ public:
 
         for (int i = m; i >= 0; --i)
         {
-            if (gird[m][n] >= 0)
+            if (grid[m][n] >= 0)
                 break;
             for (int j = n; j >= 0; --j)
             {
