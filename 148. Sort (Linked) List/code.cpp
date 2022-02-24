@@ -32,7 +32,10 @@ public:
         return dummyHead->next;
     }
 
-    // Optimal But No Clue How This Shit Works
+    //*****************************************//
+    // Optimal But No Clue How This Shit Works //
+    //*****************************************//
+
     ListNode* tail = new ListNode();
     ListNode* nextSubList = new ListNode();
 
