@@ -20,4 +20,17 @@ public:
         
         return (int)right;
     }
+
+    // Brute force
+    int arrangeCoins(int n) {
+        int i = 1;
+        int rows = 0;
+        while(i <= n){
+            n -= i;
+            i++;
+            rows++;
+        }
+        
+        return rows;
+    }
 };
